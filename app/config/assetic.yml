@@ -1,0 +1,39 @@
+# Assetic Configuration
+assetic:
+    debug:          "%kernel.debug%"
+    use_controller: false
+    bundles:        [ ]
+    #java: /usr/bin/java
+    filters:
+        cssrewrite: ~
+        less:
+            node: %kernel.root_dir%/../bin/node
+            node_paths: [%kernel.root_dir%/../node_modules]
+            apply_to: "\.less$"
+            formatter: "compressed"
+            preserve_comments: false
+    read_from: %kernel.root_dir%/
+    write_to: %kernel.root_dir%/../web
+    assets:
+        klanpage_css:
+            inputs:
+                - Resources/less/build.less
+            filters:
+                - less
+                - cssrewrite
+            output: css/klanpage.css
+        klanpage_js:
+            inputs: 
+                - Resources/js/custom.js
+            output: js/klanpage.js
+        backend_css:
+            inputs:
+                - Resources/less/backend/build.less
+            filters:
+                - less
+                - cssrewrite
+            output: css/backend.css
+        backend_js:
+            inputs: 
+                - Resources/js/backend/custom.js
+            output: js/backend.js

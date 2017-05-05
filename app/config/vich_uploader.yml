@@ -1,0 +1,19 @@
+vich_uploader:
+    db_driver: orm # or mongodb or propel or phpcr
+    default_filename_attribute_suffix:  _name
+    storage: file_system
+    twig: true
+    metadata:
+        cache: file
+        file_cache:
+            dir: '%kernel.cache_dir%/vich_uploader'
+        auto_detection: true
+    mappings:
+        testing:
+            uri_prefix: uploads/testing
+            upload_destination: %kernel.root_dir%/../web/uploads/testing
+            namer: vich_uploader.namer_origname
+        proposal:
+            uri_prefix: uploads/proposal
+            upload_destination: %kernel.root_dir%/../web/uploads/proposal
+            namer: vich_uploader.namer_origname
