@@ -1,1 +1,4 @@
+kore_page:
+    resource: "@KorePageBundle/Resources/config/routing.yml"
+    prefix:   /kore/page
 
