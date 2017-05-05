@@ -15,17 +15,17 @@ assetic:
     read_from: %kernel.root_dir%/
     write_to: %kernel.root_dir%/../web
     assets:
-        klanpage_css:
+        frontend_css:
             inputs:
-                - Resources/less/build.less
+                - Resources/less/frontend/build.less
             filters:
                 - less
                 - cssrewrite
-            output: css/klanpage.css
-        klanpage_js:
+            output: css/frontend.css
+        frontend_js:
             inputs: 
-                - Resources/js/custom.js
-            output: js/klanpage.js
+                - Resources/js/frontend/custom.js
+            output: js/frontend.js
         backend_css:
             inputs:
                 - Resources/less/backend/build.less

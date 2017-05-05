@@ -10,4 +10,5 @@
 /vendor/
 /bin/
 /composer.phar
-/src/Kore/*
+/src/Kore
+/node_modules

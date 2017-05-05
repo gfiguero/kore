@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "86da305ec957f3e2fb604ee0d9ef70df",
+    "content-hash": "9af25ff49471032c53c3c8d55b8a438d",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -1182,77 +1182,6 @@
                 "uploadable"
             ],
             "time": "2017-04-23T08:59:41+00:00"
-        },
-        {
-            "name": "gfiguero/korepagebundle",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/gfiguero/korepagebundle.git",
-                "reference": "177b0a5bba22c3874f9481f942eb37e921fbce92"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/gfiguero/korepagebundle/zipball/177b0a5bba22c3874f9481f942eb37e921fbce92",
-                "reference": "177b0a5bba22c3874f9481f942eb37e921fbce92",
-                "shasum": ""
-            },
-            "require": {
-                "braincrafted/bootstrap-bundle": "^2.2",
-                "components/bootstrap": "^3.3",
-                "components/font-awesome": "^4.6",
-                "components/jquery": "^2.2",
-                "components/jqueryui": "^1.11",
-                "doctrine/doctrine-bundle": "~1.4",
-                "doctrine/orm": "^2.4.8",
-                "incenteev/composer-parameter-handler": "~2.0",
-                "knplabs/knp-menu-bundle": "^2.1",
-                "knplabs/knp-paginator-bundle": "^2.5",
-                "knplabs/knp-time-bundle": "^1.6",
-                "koala-framework/composer-extra-assets": "^2.0",
-                "liip/imagine-bundle": "^1.5",
-                "mouf/nodejs-installer": "^1.0",
-                "onokumus/metismenu": "^2.5",
-                "sensio/distribution-bundle": "~4.0",
-                "sensio/framework-extra-bundle": "^3.0.2",
-                "stof/doctrine-extensions-bundle": "^1.2",
-                "symfony/assetic-bundle": "^2.8",
-                "symfony/intl": "^2.8",
-                "symfony/monolog-bundle": "^3.0.2",
-                "symfony/swiftmailer-bundle": "~2.3,>=2.3.10",
-                "symfony/symfony": "2.8.*",
-                "symfony/validator": "^2.8",
-                "symfony/yaml": "^2.8",
-                "twig/extensions": "^1.3",
-                "twig/twig": "^1.0||^2.0",
-                "vich/uploader-bundle": "^1.4"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Kore\\PageBundle\\": ""
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Garri Figueroa",
-                    "email": "gfiguero@gmail.com"
-                }
-            ],
-            "description": "A simple page bundle",
-            "support": {
-                "source": "https://github.com/gfiguero/korepagebundle/tree/master",
-                "issues": "https://github.com/gfiguero/korepagebundle/issues"
-            },
-            "time": "2017-05-05 20:26:36"
         },
         {
             "name": "imagine/imagine",
@@ -3931,9 +3860,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "gfiguero/korepagebundle": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
