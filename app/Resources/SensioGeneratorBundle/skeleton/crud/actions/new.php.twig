@@ -26,6 +26,7 @@
                 $em->persist(${{ entity_singularized }});
                 $em->flush();
                 $request->getSession()->getFlashBag()->add( 'success', '{{ entity_singularized ~ '.flash.created' }}' );
+                return $this->redirect($this->generateUrl('{{ route_name_prefix }}_index'));
             } else {
                 return $this->render('{{ entity|lower|replace({'\\': '/'}) }}/new.html.twig', array(
                     '{{ entity_singularized }}' => ${{ entity_singularized }},
@@ -36,7 +37,9 @@
 {% endblock method_body %}
 
 {% block method_return %}
-        return $this->redirect($this->generateUrl('{{ route_name_prefix }}_index'));
+        return $this->render('{{ entity|lower|replace({'\\': '/'}) }}/new.html.twig', array(
+            'newForm' => $newForm->createView(),
+        ));
 {% endblock method_return %}
     }
 

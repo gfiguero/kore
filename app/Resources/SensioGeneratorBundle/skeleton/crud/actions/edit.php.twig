@@ -26,18 +26,17 @@
                 $em->persist(${{ entity_singularized }});
                 $em->flush();
                 $request->getSession()->getFlashBag()->add( 'success', '{{ entity_singularized ~ '.flash.updated' }}' );
-            } else {
-                return $this->render('{{ entity|lower|replace({'\\': '/'}) }}/edit.html.twig', array(
-                    '{{ entity_singularized }}' => ${{ entity_singularized }},
-                    'editForm' => $editForm->createView(),
-                    'deleteForm' => $deleteForm->createView(),
-                ));
+                return $this->redirect($this->generateUrl('{{ route_name_prefix }}_index'));
             }
         }
 {% endblock method_body %}
 
 {% block method_return %}
-        return $this->redirect($this->generateUrl('{{ route_name_prefix }}_index'));
+        return $this->render('{{ entity|lower|replace({'\\': '/'}) }}/edit.html.twig', array(
+            '{{ entity_singularized }}' => ${{ entity_singularized }},
+            'editForm' => $editForm->createView(),
+            'deleteForm' => $deleteForm->createView(),
+        ));
 {% endblock method_return %}
     }
 

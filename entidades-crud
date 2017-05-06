@@ -1,0 +1,5 @@
+php app/console doctrine:generate:entities KorePageBundle:Frontpage --path="src"
+php app/console doctrine:generate:entities KorePageBundle:FrontpagePhoto --path="src"
+
+php app/console generate:doctrine:crud --entity=KorePageBundle:Frontpage --format=yml --with-write --overwrite --no-interaction --route-prefix=frontpage
+php app/console generate:doctrine:crud --entity=KorePageBundle:FrontpagePhoto --format=yml --with-write --overwrite --no-interaction --route-prefix=frontpagephoto

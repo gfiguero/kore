@@ -1,8 +1,8 @@
 {% block extends %}
-{{ "{% extends '::base.html.twig' %}" }}
-{{ "{% use '::navbar.html.twig' %}" }}
-{{ "{% use '::sidebar.html.twig' %}" }}
-{{ "{% use '::icons.html.twig' %}" }}
+{{ "{% extends 'KorePageBundle::base.html.twig' %}" }}
+{{ "{% use 'KorePageBundle::navbar.html.twig' %}" }}
+{{ "{% use 'KorePageBundle::sidebar.html.twig' %}" }}
+{{ "{% use 'KorePageBundle::icons.html.twig' %}" }}
 {% endblock extends %}
 
 {% block body %}
@@ -16,7 +16,7 @@
         <div class="row" id="page-header">
             <div class="col-lg-12">
                 <h1 class="page-header">{{ "{% block icons %}{{ parent() }}{% endblock %}{{ '" ~ entity_singularized|lower ~ ".title.index'|trans }}" }}</h1>
-                {{ "{% include '::flashbag.html.twig' with { 'translation_domain': translation_domain } %}" }}
+                {{ "{% include 'KorePageBundle::flashbag.html.twig' with { 'translation_domain': translation_domain } %}" }}
             </div>
         </div>
         <!-- /#page-header -->
