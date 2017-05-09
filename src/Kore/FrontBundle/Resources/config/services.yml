@@ -1,0 +1,4 @@
+services:
+#    kore_front.example:
+#        class: Kore\FrontBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

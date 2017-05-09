@@ -1,0 +1,12 @@
+{% block about %}
+    <section id="about" class="bg-primary text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <h2>{{ frontpage.about|raw }}</h2>
+                    <p>{{ frontpage.subabout|raw }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

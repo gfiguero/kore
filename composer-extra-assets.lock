@@ -1,5 +1,9 @@
 {
-    "bower-dependencies": [],
+    "bower-dependencies": {
+        "html5-device-mockups": "https://github.com/pixelsign/html5-device-mockups.git#2.0.0",
+        "scrollreveal": "https://github.com/jlmakes/scrollreveal.js.git#3.3.5",
+        "simple-line-icons": "https://github.com/thesabbir/simple-line-icons.git#2.4.1"
+    },
     "npm-dependencies": {
         "self": {
             "ajv": {

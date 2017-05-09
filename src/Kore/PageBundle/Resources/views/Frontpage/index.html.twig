@@ -43,6 +43,11 @@
                                     <th>{{ knp_pagination_sortable(frontpages, 'frontpage.form.title'|trans, 'title') }}{% if sort == 'title' %}{% if direction == 'desc' %}{{ icon('caret-down') }}{% else %}{{ icon('caret-up') }}{% endif %}{% endif %}</th>
                                     <th>{{ knp_pagination_sortable(frontpages, 'frontpage.form.subtitle'|trans, 'subtitle') }}{% if sort == 'subtitle' %}{% if direction == 'desc' %}{{ icon('caret-down') }}{% else %}{{ icon('caret-up') }}{% endif %}{% endif %}</th>
                                     <th>{{ knp_pagination_sortable(frontpages, 'frontpage.form.about'|trans, 'about') }}{% if sort == 'about' %}{% if direction == 'desc' %}{{ icon('caret-down') }}{% else %}{{ icon('caret-up') }}{% endif %}{% endif %}</th>
+                                    <th>{{ knp_pagination_sortable(frontpages, 'frontpage.form.subabout'|trans, 'subabout') }}{% if sort == 'subabout' %}{% if direction == 'desc' %}{{ icon('caret-down') }}{% else %}{{ icon('caret-up') }}{% endif %}{% endif %}</th>
+                                    <th>{{ knp_pagination_sortable(frontpages, 'frontpage.form.service'|trans, 'service') }}{% if sort == 'service' %}{% if direction == 'desc' %}{{ icon('caret-down') }}{% else %}{{ icon('caret-up') }}{% endif %}{% endif %}</th>
+                                    <th>{{ knp_pagination_sortable(frontpages, 'frontpage.form.subservice'|trans, 'subservice') }}{% if sort == 'subservice' %}{% if direction == 'desc' %}{{ icon('caret-down') }}{% else %}{{ icon('caret-up') }}{% endif %}{% endif %}</th>
+                                    <th>{{ knp_pagination_sortable(frontpages, 'frontpage.form.calltoaction'|trans, 'calltoaction') }}{% if sort == 'calltoaction' %}{% if direction == 'desc' %}{{ icon('caret-down') }}{% else %}{{ icon('caret-up') }}{% endif %}{% endif %}</th>
+                                    <th>{{ knp_pagination_sortable(frontpages, 'frontpage.form.contact'|trans, 'contact') }}{% if sort == 'contact' %}{% if direction == 'desc' %}{{ icon('caret-down') }}{% else %}{{ icon('caret-up') }}{% endif %}{% endif %}</th>
                                     <th>{{ knp_pagination_sortable(frontpages, 'frontpage.form.createdAt'|trans, 'createdAt') }}{% if sort == 'createdAt' %}{% if direction == 'desc' %}{{ icon('caret-down') }}{% else %}{{ icon('caret-up') }}{% endif %}{% endif %}</th>
                                     <th>{{ knp_pagination_sortable(frontpages, 'frontpage.form.updatedAt'|trans, 'updatedAt') }}{% if sort == 'updatedAt' %}{% if direction == 'desc' %}{{ icon('caret-down') }}{% else %}{{ icon('caret-up') }}{% endif %}{% endif %}</th>
                                 </tr>
@@ -64,6 +69,11 @@
                                     <td>{% if frontpage.title %}{{ frontpage.title }}{% endif %}</td>
                                     <td>{% if frontpage.subtitle %}{{ frontpage.subtitle }}{% endif %}</td>
                                     <td>{% if frontpage.about %}{{ frontpage.about }}{% endif %}</td>
+                                    <td>{% if frontpage.subabout %}{{ frontpage.subabout }}{% endif %}</td>
+                                    <td>{% if frontpage.service %}{{ frontpage.service }}{% endif %}</td>
+                                    <td>{% if frontpage.subservice %}{{ frontpage.subservice }}{% endif %}</td>
+                                    <td>{% if frontpage.calltoaction %}{{ frontpage.calltoaction }}{% endif %}</td>
+                                    <td>{% if frontpage.contact %}{{ frontpage.contact }}{% endif %}</td>
                                     <td>{% if frontpage.createdAt %}{{ frontpage.createdAt|localizeddate('full', 'full', 'es_ES', 'America/Santiago', "dd-LLL-Y - HH:mm") }}{% endif %}</td>
                                     <td>{% if frontpage.updatedAt %}{{ frontpage.updatedAt|localizeddate('full', 'full', 'es_ES', 'America/Santiago', "dd-LLL-Y - HH:mm") }}{% endif %}</td>
                                 </tr>

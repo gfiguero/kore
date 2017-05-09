@@ -33,6 +33,31 @@ class Frontpage
     private $about;
 
     /**
+     * @var string
+     */
+    private $subabout;
+
+    /**
+     * @var string
+     */
+    private $service;
+
+    /**
+     * @var string
+     */
+    private $subservice;
+
+    /**
+     * @var string
+     */
+    private $calltoaction;
+
+    /**
+     * @var string
+     */
+    private $contact;
+
+    /**
      * @var \DateTime
      */
     private $createdAt;
@@ -164,6 +189,126 @@ class Frontpage
     public function getAbout()
     {
         return $this->about;
+    }
+
+    /**
+     * Set subabout
+     *
+     * @param string $subabout
+     *
+     * @return Frontpage
+     */
+    public function setSubabout($subabout)
+    {
+        $this->subabout = $subabout;
+
+        return $this;
+    }
+
+    /**
+     * Get subabout
+     *
+     * @return string
+     */
+    public function getSubabout()
+    {
+        return $this->subabout;
+    }
+
+    /**
+     * Set service
+     *
+     * @param string $service
+     *
+     * @return Frontpage
+     */
+    public function setService($service)
+    {
+        $this->service = $service;
+
+        return $this;
+    }
+
+    /**
+     * Get service
+     *
+     * @return string
+     */
+    public function getService()
+    {
+        return $this->service;
+    }
+
+    /**
+     * Set subservice
+     *
+     * @param string $subservice
+     *
+     * @return Frontpage
+     */
+    public function setSubservice($subservice)
+    {
+        $this->subservice = $subservice;
+
+        return $this;
+    }
+
+    /**
+     * Get subservice
+     *
+     * @return string
+     */
+    public function getSubservice()
+    {
+        return $this->subservice;
+    }
+
+    /**
+     * Set calltoaction
+     *
+     * @param string $calltoaction
+     *
+     * @return Frontpage
+     */
+    public function setCalltoaction($calltoaction)
+    {
+        $this->calltoaction = $calltoaction;
+
+        return $this;
+    }
+
+    /**
+     * Get calltoaction
+     *
+     * @return string
+     */
+    public function getCalltoaction()
+    {
+        return $this->calltoaction;
+    }
+
+    /**
+     * Set contact
+     *
+     * @param string $contact
+     *
+     * @return Frontpage
+     */
+    public function setContact($contact)
+    {
+        $this->contact = $contact;
+
+        return $this;
+    }
+
+    /**
+     * Get contact
+     *
+     * @return string
+     */
+    public function getContact()
+    {
+        return $this->contact;
     }
 
     /**

@@ -1,0 +1,3 @@
+kore_front_homepage:
+    path:     /
+    defaults: { _controller: KoreFrontBundle:Front:index }

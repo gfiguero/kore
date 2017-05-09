@@ -47,6 +47,16 @@
                                 <dd>{% if frontpage.subtitle %}{{ frontpage.subtitle }}{% endif %}</dd>
                             <dt>{{ 'frontpage.form.about'|trans }}</dt>
                                 <dd>{% if frontpage.about %}{{ frontpage.about }}{% endif %}</dd>
+                            <dt>{{ 'frontpage.form.subabout'|trans }}</dt>
+                                <dd>{% if frontpage.subabout %}{{ frontpage.subabout }}{% endif %}</dd>
+                            <dt>{{ 'frontpage.form.service'|trans }}</dt>
+                                <dd>{% if frontpage.service %}{{ frontpage.service }}{% endif %}</dd>
+                            <dt>{{ 'frontpage.form.subservice'|trans }}</dt>
+                                <dd>{% if frontpage.subservice %}{{ frontpage.subservice }}{% endif %}</dd>
+                            <dt>{{ 'frontpage.form.calltoaction'|trans }}</dt>
+                                <dd>{% if frontpage.calltoaction %}{{ frontpage.calltoaction }}{% endif %}</dd>
+                            <dt>{{ 'frontpage.form.contact'|trans }}</dt>
+                                <dd>{% if frontpage.contact %}{{ frontpage.contact }}{% endif %}</dd>
                             <dt>{{ 'frontpage.form.createdAt'|trans }}</dt>
                                 <dd>{% if frontpage.createdAt %}{{ frontpage.createdAt|localizeddate('full', 'full', 'es_ES', 'America/Santiago', "d 'de' LLLL 'de' Y - HH:mm") }}{% endif %}</dd>
                             <dt>{{ 'frontpage.form.updatedAt'|trans }}</dt>

@@ -110,4 +110,3 @@ class FrontpagePhoto
         return $this->frontpage;
     }
 }
-

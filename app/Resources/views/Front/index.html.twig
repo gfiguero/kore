@@ -1,0 +1,14 @@
+{% extends ':Front:base.html.twig' %}
+
+{% block title %}{{ frontpage.name|raw }}{% endblock %}
+
+{% block body %}
+    {% use ':Front:navbar.html.twig' %}{% block navbar %}{{ parent() }}{% endblock %}
+    {% use ':Front:header.html.twig' %}{% block header %}{{ parent() }}{% endblock %}
+    {% use ':Front:about.html.twig' %}{% block about %}{{ parent() }}{% endblock %}
+    {% use ':Front:service.html.twig' %}{% block service %}{{ parent() }}{% endblock %}
+    {% use ':Front:calltoaction.html.twig' %}{% block calltoaction %}{{ parent() }}{% endblock %}
+    {% use ':Front:contact.html.twig' %}{% block contact %}{{ parent() }}{% endblock %}
+    {% use ':Front:footer.html.twig' %}{% block footer %}{{ parent() }}{% endblock %}
+{% endblock %}
+

@@ -84,6 +84,11 @@
                 "includeBinInPath ": true
             }
         },
+        "require-bower": {
+            "scrollreveal": "*",
+            "html5-device-mockups": "*",
+            "simple-line-icons": "*"
+        },
         "require-npm": {
             "less": "*"
         }

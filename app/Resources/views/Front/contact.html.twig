@@ -1,0 +1,18 @@
+{% block contact %}
+    <section id="contact" class="contact bg-primary">
+        <div class="container">
+            <h2>{{ frontpage.contact|raw }}</h2>
+            <ul class="list-inline list-social">
+                <li class="social-twitter">
+                    <a href="#">{{ icon('twitter') }}</a>
+                </li>
+                <li class="social-facebook">
+                    <a href="#">{{ icon('facebook') }}</a>
+                </li>
+                <li class="social-google-plus">
+                    <a href="#">{{ icon('google-plus') }}</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+{% endblock %}

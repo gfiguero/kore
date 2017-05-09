@@ -23,7 +23,28 @@ Kore\PageBundle\Entity\Frontpage:
             length: 300
             nullable: true
         about:
-            type: text
+            type: string
+            length: 300
+            nullable: true
+        subabout:
+            type: string
+            length: 300
+            nullable: true
+        service:
+            type: string
+            length: 300
+            nullable: true
+        subservice:
+            type: string
+            length: 300
+            nullable: true
+        calltoaction:
+            type: string
+            length: 300
+            nullable: true
+        contact:
+            type: string
+            length: 300
             nullable: true
         createdAt:
             type: datetime
