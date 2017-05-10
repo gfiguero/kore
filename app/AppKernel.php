@@ -26,7 +26,6 @@ class AppKernel extends Kernel
             new Vich\UploaderBundle\VichUploaderBundle(),
             new Liip\ImagineBundle\LiipImagineBundle(),
             new Kore\PageBundle\KorePageBundle(),
-            new Kore\GeneratorBundle\KoreGeneratorBundle(),
             new Kore\FrontBundle\KoreFrontBundle(),
         );
 
@@ -35,6 +34,7 @@ class AppKernel extends Kernel
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
             $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
             $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
+            $bundles[] = new Kore\GeneratorBundle\KoreGeneratorBundle(),
         }
 
         return $bundles;
