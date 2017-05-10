@@ -35,9 +35,7 @@
         "knplabs/knp-menu-bundle": "^2.1",
         "knplabs/knp-paginator-bundle": "^2.5",
         "knplabs/knp-time-bundle": "^1.6",
-        "koala-framework/composer-extra-assets": "^2.0",
         "liip/imagine-bundle": "^1.5",
-        "mouf/nodejs-installer": "^1.0",
         "onokumus/metismenu": "^2.5",
         "stof/doctrine-extensions-bundle": "^1.2",
         "symfony/assetic-bundle": "^2.8",
@@ -61,10 +59,12 @@
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget"
         ],
         "post-install-cmd": [
-            "@symfony-scripts"
+            "@symfony-scripts",
+            "bower install"
         ],
         "post-update-cmd": [
-            "@symfony-scripts"
+            "@symfony-scripts",
+            "bower update"
         ]
     },
     "config": {
@@ -78,19 +78,6 @@
         "incenteev-parameters": {
             "file": "app/config/parameters.yml"
         },
-        "branch-alias": null,
-        "mouf": {
-            "nodejs": {
-                "includeBinInPath ": true
-            }
-        },
-        "require-bower": {
-            "scrollreveal": "*",
-            "html5-device-mockups": "*",
-            "simple-line-icons": "*"
-        },
-        "require-npm": {
-            "less": "*"
-        }
+        "branch-alias": null
     }
 }
