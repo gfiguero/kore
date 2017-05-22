@@ -1,0 +1,15 @@
+Kore\ProductBundle\Entity\OrderStatus:
+    type: entity
+    table: OrderStatus
+    repositoryClass: Kore\ProductBundle\Entity\OrderStatusRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 300
+    lifecycleCallbacks: {  }

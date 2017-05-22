@@ -1,0 +1,36 @@
+Kore\ProductBundle\Entity\ProductOrder:
+    type: entity
+    table: ProductOrder
+    repositoryClass: Kore\ProductBundle\Entity\ProductOrderRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    manyToOne:
+        order:
+            targetEntity: Kore\ProductBundle\Entity\Order
+            inversedBy: productorders
+        product:
+            targetEntity: Kore\ProductBundle\Entity\Product
+            inversedBy: productorders
+    fields:
+        createdAt:
+            type: datetime
+            gedmo:
+                timestampable:
+                    on: create
+        updatedAt:
+            type: datetime
+            gedmo:
+                timestampable:
+                    on: update
+        deletedAt:
+            type: datetime
+            nullable: true
+    gedmo:
+        soft_deleteable:
+            field_name: deletedAt
+            time_aware: false
+    lifecycleCallbacks: {  }

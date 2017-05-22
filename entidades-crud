@@ -3,3 +3,23 @@ php app/console doctrine:generate:entities KorePageBundle:FrontpagePhoto --path=
 
 php app/console generate:doctrine:crud --entity=KorePageBundle:Frontpage --format=yml --with-write --overwrite --no-interaction --route-prefix=frontpage
 php app/console generate:doctrine:crud --entity=KorePageBundle:FrontpagePhoto --format=yml --with-write --overwrite --no-interaction --route-prefix=frontpagephoto
+
+// Product
+
+php app/console doctrine:generate:entities KoreProductBundle:Category --path="src"
+php app/console doctrine:generate:entities KoreProductBundle:Subcategory --path="src"
+php app/console doctrine:generate:entities KoreProductBundle:Product --path="src"
+php app/console doctrine:generate:entities KoreProductBundle:ProductImage --path="src"
+php app/console doctrine:generate:entities KoreProductBundle:ProductOrder --path="src"
+php app/console doctrine:generate:entities KoreProductBundle:Order --path="src"
+php app/console doctrine:generate:entities KoreProductBundle:PaymentMethod --path="src"
+php app/console doctrine:generate:entities KoreProductBundle:OrderStatus --path="src"
+
+php app/console kore:doctrine:crud --entity=KoreProductBundle:Category --format=yml --with-write --overwrite --no-interaction --route-prefix=category
+php app/console kore:doctrine:crud --entity=KoreProductBundle:Subcategory --format=yml --with-write --overwrite --no-interaction --route-prefix=subcategory
+php app/console kore:doctrine:crud --entity=KoreProductBundle:Product --format=yml --with-write --overwrite --no-interaction --route-prefix=product
+php app/console kore:doctrine:crud --entity=KoreProductBundle:ProductImage --format=yml --with-write --overwrite --no-interaction --route-prefix=productimage
+php app/console kore:doctrine:crud --entity=KoreProductBundle:ProductOrder --format=yml --with-write --overwrite --no-interaction --route-prefix=productorder
+php app/console kore:doctrine:crud --entity=KoreProductBundle:Order --format=yml --with-write --overwrite --no-interaction --route-prefix=order
+php app/console kore:doctrine:crud --entity=KoreProductBundle:PaymentMethod --format=yml --with-write --overwrite --no-interaction --route-prefix=paymentmethod
+php app/console kore:doctrine:crud --entity=KoreProductBundle:OrderStatus --format=yml --with-write --overwrite --no-interaction --route-prefix=orderstatus

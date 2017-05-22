@@ -1,0 +1,37 @@
+Kore\ProductBundle\Entity\ProductImage:
+    type: entity
+    table: ProductImage
+    repositoryClass: Kore\ProductBundle\Entity\ProductImageRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    manyToOne:
+        product:
+            targetEntity: Kore\ProductBundle\Entity\Product
+            inversedBy: productimages
+    fields:
+        image:
+            type: string
+            length: 300
+            nullable: true
+        createdAt:
+            type: datetime
+            gedmo:
+                timestampable:
+                    on: create
+        updatedAt:
+            type: datetime
+            gedmo:
+                timestampable:
+                    on: update
+        deletedAt:
+            type: datetime
+            nullable: true
+    gedmo:
+        soft_deleteable:
+            field_name: deletedAt
+            time_aware: false
+    lifecycleCallbacks: {  }

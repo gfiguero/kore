@@ -1,0 +1,15 @@
+Kore\ProductBundle\Entity\PaymentMethod:
+    type: entity
+    table: PaymentMethod
+    repositoryClass: Kore\ProductBundle\Entity\PaymentMethodRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 300
+    lifecycleCallbacks: {  }

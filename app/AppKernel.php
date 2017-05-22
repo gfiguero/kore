@@ -28,6 +28,7 @@ class AppKernel extends Kernel
             new Kore\PageBundle\KorePageBundle(),
             new Kore\FrontBundle\KoreFrontBundle(),
             new Kore\PabloBundle\KorePabloBundle(),
+            new Kore\ProductBundle\KoreProductBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {

@@ -1,0 +1,35 @@
+kore_product_category:
+    resource: "@KoreProductBundle/Resources/config/routing/category.yml"
+    prefix:   /category
+
+kore_product_subcategory:
+    resource: "@KoreProductBundle/Resources/config/routing/subcategory.yml"
+    prefix:   /subcategory
+
+kore_product_product:
+    resource: "@KoreProductBundle/Resources/config/routing/product.yml"
+    prefix:   /product
+
+kore_product_productimage:
+    resource: "@KoreProductBundle/Resources/config/routing/productimage.yml"
+    prefix:   /productimage
+
+kore_product_productorder:
+    resource: "@KoreProductBundle/Resources/config/routing/productorder.yml"
+    prefix:   /productorder
+
+kore_product_order:
+    resource: "@KoreProductBundle/Resources/config/routing/order.yml"
+    prefix:   /order
+
+kore_product_paymentmethod:
+    resource: "@KoreProductBundle/Resources/config/routing/paymentmethod.yml"
+    prefix:   /paymentmethod
+
+kore_product_orderstatus:
+    resource: "@KoreProductBundle/Resources/config/routing/orderstatus.yml"
+    prefix:   /orderstatus
+
+kore_product_homepage:
+    path:     /
+    defaults: { _controller: KoreProductBundle:Default:index }

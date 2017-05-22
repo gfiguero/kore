@@ -1,0 +1,40 @@
+Kore\ProductBundle\Entity\Subcategory:
+    type: entity
+    table: Subcategory
+    repositoryClass: Kore\ProductBundle\Entity\SubcategoryRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    manyToOne:
+        category:
+            targetEntity: Kore\ProductBundle\Entity\Category
+            inversedBy: subcategories
+            joinColumn:
+                onDelete: SET NULL
+    oneToMany:
+        products:
+            targetEntity: Kore\ProductBundle\Entity\Product
+            mappedBy: subcategory
+    fields:
+        name:
+            type: string
+            length: 300
+            nullable: true
+        slug:
+            type: string
+            length: 300
+            nullable: true
+        createdAt:
+            type: datetime
+            gedmo:
+                timestampable:
+                    on: create
+        updatedAt:
+            type: datetime
+            gedmo:
+                timestampable:
+                    on: update
+    lifecycleCallbacks: {  }

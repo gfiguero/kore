@@ -1,0 +1,61 @@
+Kore\ProductBundle\Entity\Product:
+    type: entity
+    table: Product
+    repositoryClass: Kore\ProductBundle\Entity\ProductRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    manyToOne:
+        subcategory:
+            targetEntity: Kore\ProductBundle\Entity\Subcategory
+            inversedBy: products
+            joinColumn:
+                onDelete: SET NULL
+    oneToMany:
+        productorders:
+            targetEntity: Kore\ProductBundle\Entity\ProductOrder
+            mappedBy: product
+        productimages:
+            targetEntity: Kore\ProductBundle\Entity\ProductImage
+            mappedBy: product
+    fields:
+        name:
+            type: string
+            length: 300
+            nullable: true
+        code:
+            type: string
+            length: 20
+            nullable: true
+        price:
+            type: integer
+        image:
+            type: string
+            length: 300
+            nullable: true
+        enabled:
+            type: boolean
+        description:
+            type: text
+            nullable: true
+        createdAt:
+            type: datetime
+            gedmo:
+                timestampable:
+                    on: create
+        updatedAt:
+            type: datetime
+            gedmo:
+                timestampable:
+                    on: update
+        deletedAt:
+            type: datetime
+            nullable: true
+    gedmo:
+        soft_deleteable:
+            field_name: deletedAt
+            time_aware: false
+    lifecycleCallbacks: {  }

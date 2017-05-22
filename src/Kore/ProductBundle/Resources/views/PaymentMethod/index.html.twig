@@ -1,0 +1,106 @@
+{% extends 'KoreProductBundle::base.html.twig' %}
+{% use 'KoreProductBundle::navbar.html.twig' %}
+{% use 'KoreProductBundle::sidebar.html.twig' %}
+{% use 'KoreProductBundle::icons.html.twig' %}
+
+{% set translation_domain = 'KoreProductBundle' %}
+{% trans_default_domain translation_domain %}
+
+{% block title %}{{ 'paymentmethod.index.title'|trans }}{% endblock %}
+
+{% block body %}
+    <div id="page-wrapper">
+        <div class="row" id="page-header">
+            <div class="col-lg-12">
+                <h1 class="page-header">{% block icons %}{{ parent() }}{% endblock %}{{ 'paymentmethod.index.title'|trans }}</h1>
+                {% include 'KoreProductBundle::flashbag.html.twig' with { 'translation_domain': translation_domain } %}
+            </div>
+        </div>
+        <!-- /#page-header -->
+
+        <div class="row" id="page-toolbar">
+            <div class="col-lg-12">
+                <div class="btn-toolbar">
+                    <a type="button" class="btn btn-success" href="{{ path('paymentmethod_new') }}">{{ icon('plus') }}&nbsp;{{ 'paymentmethod.new.link'|trans }}</a>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-toolbar -->
+
+        <div class="row" id="page-list">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h2 class="panel-title">{{ 'paymentmethod.index.list'|trans }}</h2>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="records_list table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>{{ 'paymentMethod.form.actions'|trans }}</th>
+                                    <th>{{ knp_pagination_sortable(paymentMethods, 'paymentmethod.form.id'|trans, 'id') }}{% if sort == 'id' %}{% if direction == 'desc' %}{{ icon('caret-down') }}{% else %}{{ icon('caret-up') }}{% endif %}{% endif %}</th>
+                                    <th>{{ knp_pagination_sortable(paymentMethods, 'paymentmethod.form.name'|trans, 'name') }}{% if sort == 'name' %}{% if direction == 'desc' %}{{ icon('caret-down') }}{% else %}{{ icon('caret-up') }}{% endif %}{% endif %}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            {% for key, paymentmethod in paymentMethods %}
+                                <tr>
+                                    <td>
+                                        <div class="btn-toolbar">
+                                            <div class="btn-group" role="group">
+                                                <a type="button" class="btn btn-sm btn-warning" href="{{ path('paymentmethod_show', { 'id': paymentmethod.id }) }}" aria-label="{{ 'paymentmethod.show.link'|trans }}">{{ icon('search') }}</a>
+                                                <a type="button" class="btn btn-sm btn-primary" href="{{ path('paymentmethod_edit', { 'id': paymentmethod.id }) }}" aria-label="{{ 'paymentmethod.show.link'|trans }}">{{ icon('edit') }}</a>
+                                                <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalDelete{{ paymentmethod.id }}">{{ icon('trash') }}</button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>{% if paymentmethod.id %}{{ paymentmethod.id }}{% endif %}</td>
+                                    <td>{% if paymentmethod.name %}{{ paymentmethod.name }}{% endif %}</td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="panel-footer">
+                        <div class="text-center">
+                            {{ knp_pagination_render(paymentMethods) }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-list -->
+
+        <div id="page-modal">
+            {% for key, paymentmethod in paymentMethods %}
+            <div class="modal fade" id="modalDelete{{ paymentmethod.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog modal-sm" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">{{ icon('times') }}</button>
+                            <h4 class="modal-title" id="myModalLabel">{{ 'paymentmethod.delete.title'|trans }}</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-xs-2 text-center">{{ icon('exclamation-triangle fa-5x') }}</div>
+                                <div class="col-xs-10"><p>{{ 'paymentmethod.delete.message'|trans }}</p></div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            {% set deleteForm = attribute(deleteForms, key) %}
+                            {{ form_start(deleteForm) }}
+                                {{ form_widget(deleteForm) }}
+                                <button type="submit" class="btn btn-danger pull-right">{{ icon('trash') }}&nbsp;{{ 'paymentmethod.delete.submit'|trans }}</button>
+                            {{ form_end(deleteForm) }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <!-- /#page-modal -->
+
+    </div>
+    <!-- /#page-wrapper -->
+
+{% endblock %}
