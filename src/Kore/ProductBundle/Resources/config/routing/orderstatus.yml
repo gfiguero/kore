@@ -1,0 +1,24 @@
+orderstatus_index:
+    path:     /
+    defaults: { _controller: "KoreProductBundle:OrderStatus:index" }
+    methods:  GET
+
+orderstatus_show:
+    path:     /{id}/show
+    defaults: { _controller: "KoreProductBundle:OrderStatus:show" }
+    methods:  GET
+
+orderstatus_new:
+    path:     /new
+    defaults: { _controller: "KoreProductBundle:OrderStatus:new" }
+    methods:  [GET, POST]
+
+orderstatus_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "KoreProductBundle:OrderStatus:edit" }
+    methods:  [GET, POST]
+
+orderstatus_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "KoreProductBundle:OrderStatus:delete" }
+    methods:  DELETE

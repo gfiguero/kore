@@ -6,6 +6,7 @@ setfacl -dR -m u:"$HTTPDUSER":rwX -m u:`whoami`:rwX web/uploads web/media
 
 php app/console generate:bundle --namespace Kore/GeneratorBundle --dir src --bundle-name KoreGeneratorBundle --format yml --shared --no-interaction
 php app/console generate:bundle --namespace Kore/PageBundle --dir src --bundle-name KorePageBundle --format yml --shared --no-interaction
+php app/console generate:bundle --namespace Kore/ProductBundle --dir src --bundle-name KoreProductBundle --format yml --shared --no-interaction
 php app/console generate:bundle --namespace Kore/FrontBundle --dir src --bundle-name KoreFrontBundle --format yml --shared --no-interaction
 
 

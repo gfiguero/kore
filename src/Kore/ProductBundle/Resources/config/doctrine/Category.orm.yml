@@ -1,0 +1,34 @@
+Kore\ProductBundle\Entity\Category:
+    type: entity
+    table: Category
+    repositoryClass: Kore\ProductBundle\Entity\CategoryRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    oneToMany:
+        subcategories:
+            targetEntity: Kore\ProductBundle\Entity\Subcategory
+            mappedBy: category
+    fields:
+        name:
+            type: string
+            length: 300
+            nullable: true
+        slug:
+            type: string
+            length: 300
+            nullable: true
+        createdAt:
+            type: datetime
+            gedmo:
+                timestampable:
+                    on: create
+        updatedAt:
+            type: datetime
+            gedmo:
+                timestampable:
+                    on: update
+    lifecycleCallbacks: {  }

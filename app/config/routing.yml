@@ -1,3 +1,7 @@
+kore_product:
+    resource: "@KoreProductBundle/Resources/config/routing.yml"
+    prefix:   /kore/product
+
 kore_front:
     resource: "@KoreFrontBundle/Resources/config/routing.yml"
     prefix:   /

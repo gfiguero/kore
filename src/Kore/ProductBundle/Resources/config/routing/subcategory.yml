@@ -1,0 +1,24 @@
+subcategory_index:
+    path:     /
+    defaults: { _controller: "KoreProductBundle:Subcategory:index" }
+    methods:  GET
+
+subcategory_show:
+    path:     /{id}/show
+    defaults: { _controller: "KoreProductBundle:Subcategory:show" }
+    methods:  GET
+
+subcategory_new:
+    path:     /new
+    defaults: { _controller: "KoreProductBundle:Subcategory:new" }
+    methods:  [GET, POST]
+
+subcategory_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "KoreProductBundle:Subcategory:edit" }
+    methods:  [GET, POST]
+
+subcategory_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "KoreProductBundle:Subcategory:delete" }
+    methods:  DELETE

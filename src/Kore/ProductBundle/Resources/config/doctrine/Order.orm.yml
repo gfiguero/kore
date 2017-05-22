@@ -1,0 +1,55 @@
+Kore\ProductBundle\Entity\Order:
+    type: entity
+    table: CashOrder
+    repositoryClass: Kore\ProductBundle\Entity\OrderRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    oneToMany:
+        productorders:
+            targetEntity: Kore\ProductBundle\Entity\ProductOrder
+            mappedBy: order
+            cascade: [persist, remove, merge]
+    manyToOne:
+        orderstatus:
+            targetEntity: Kore\ProductBundle\Entity\OrderStatus
+        paymentmethod:
+            targetEntity: Kore\ProductBundle\Entity\PaymentMethod
+    fields:
+        name:
+            type: string
+            length: 300
+        phone:
+            type: string
+            length: 300
+        address:
+            type: string
+            length: 300
+        comment:
+            type: text
+            nullable: true
+        code:
+            type: string
+            lenght: 100
+            nullable: true
+        createdAt:
+            type: datetime
+            gedmo:
+                timestampable:
+                    on: create
+        updatedAt:
+            type: datetime
+            gedmo:
+                timestampable:
+                    on: update
+        deletedAt:
+            type: datetime
+            nullable: true
+    gedmo:
+        soft_deleteable:
+            field_name: deletedAt
+            time_aware: false
+    lifecycleCallbacks: {  }
