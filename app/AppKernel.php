@@ -27,6 +27,7 @@ class AppKernel extends Kernel
             new Liip\ImagineBundle\LiipImagineBundle(),
             new Kore\PageBundle\KorePageBundle(),
             new Kore\FrontBundle\KoreFrontBundle(),
+            new Kore\PabloBundle\KorePabloBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {

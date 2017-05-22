@@ -6,3 +6,6 @@ kore_page:
     resource: "@KorePageBundle/Resources/config/routing.yml"
     prefix:   /kore/page
 
+kore_pablo:
+    resource: "@KorePabloBundle/Resources/config/routing.yml"
+    prefix: /kore/pablo

@@ -1,0 +1,16 @@
+Kore\PabloBundle\Entity\Testing:
+    type: entity
+    table: Testing
+    id: 
+        id:
+            type: integer
+            id: true
+            generator: 
+                strategy: auto
+    fields:
+        nombre:
+            type: string
+            length: 100
+        apellido:
+            type: string
+            length: 100

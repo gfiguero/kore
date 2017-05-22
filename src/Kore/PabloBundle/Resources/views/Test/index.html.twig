@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="HVG">
+    <meta name="language" content="es">
+    <title>Testing</title>
+</head>
+<body>
+<table>
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+        </tr>    
+    </thead>
+    <tbody>
+        {% for testing in testings %}
+            <tr>
+                <td>{{ testing.nombre }}</td>
+                <td>{{ testing.apellido }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{{ form_start(form) }}
+    {{ form_rest(form) }}
+    <input type="submit" label="Enviar">
+
+{{ form_end(form) }}
+
+</body>
+</html>

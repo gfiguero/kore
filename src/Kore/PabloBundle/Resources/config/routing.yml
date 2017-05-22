@@ -1,0 +1,11 @@
+kore_pablo_testing:
+    resource: "@KorePabloBundle/Resources/config/routing/testing.yml"
+    prefix:   /testing
+
+kore_pablo_index:
+    path: /
+    defaults: { _controller: KorePabloBundle:Test:index }
+
+kore_pablo_new:
+    path: /new 
+    defaults: { _controller: KorePabloBundle:Test:new }

@@ -1,0 +1,24 @@
+testing_index:
+    path:     /
+    defaults: { _controller: "KorePabloBundle:Testing:index" }
+    methods:  GET
+
+testing_show:
+    path:     /{id}/show
+    defaults: { _controller: "KorePabloBundle:Testing:show" }
+    methods:  GET
+
+testing_new:
+    path:     /new
+    defaults: { _controller: "KorePabloBundle:Testing:new" }
+    methods:  [GET, POST]
+
+testing_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "KorePabloBundle:Testing:edit" }
+    methods:  [GET, POST]
+
+testing_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "KorePabloBundle:Testing:delete" }
+    methods:  DELETE
