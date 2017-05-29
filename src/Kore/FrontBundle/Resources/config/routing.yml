@@ -1,3 +1,7 @@
 kore_front_homepage:
     path:     /
     defaults: { _controller: KoreFrontBundle:Front:index }
+
+kore_front_one:
+    path:     /one
+    defaults: { _controller: KoreFrontBundle:One:index }

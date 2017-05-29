@@ -1,0 +1,10 @@
+{% extends 'KoreFrontBundle:One:base.html.twig' %}
+{% use 'KoreFrontBundle:One:navbar.html.twig' %}
+{% use 'KoreFrontBundle:One:header.html.twig' %}
+{% use 'KoreFrontBundle:One:footer.html.twig' %}
+
+{% block body %}
+    {% block navbar %}{{ parent() }}{% endblock %}
+    {% block header %}{{ parent() }}{% endblock %}
+    {% block footer %}{{ parent() }}{% endblock %}
+{% endblock %}

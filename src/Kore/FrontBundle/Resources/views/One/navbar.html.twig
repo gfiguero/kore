@@ -1,0 +1,19 @@
+{% block navbar %}
+    <nav id="navbar" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>{{ icon('bars') }}
+                </button>
+                <a class="navbar-brand" href="#header">KoreFrontOne</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="navbar-collapse collapse" id="navbar-collapse">
+                {#{{ knp_menu_render('FotoJoinFrontPageBundle:Builder:topMenu') }}#}
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+{% endblock %}
